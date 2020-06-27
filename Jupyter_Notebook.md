@@ -10,7 +10,7 @@ Run Cells and Select Below = shift +enter(when the slected cell is last one, be 
 Run Cells and Insert Below = alt + enter
 
 
-##have to be command mode
+## have to be command mode
 
 Insert Cell Above = a
 
