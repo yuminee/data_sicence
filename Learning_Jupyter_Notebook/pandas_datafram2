@@ -1,0 +1,35 @@
+import pandas as pd
+
+df = pd.read_csv('data/enrolment_2.csv')
+
+#80명 이상의 학생이 수강하는 과목은 “Auditorium”에서 진행됩니다.
+#40명 이상, 80명 미만의 학생이 수강하는 과목은 “Large room”에서 진행됩니다.
+#15명 이상, 40명 미만의 학생이 수강하는 과목은 “Medium room”에서 진행됩니다.
+#5명 이상, 15명 미만의 학생이 수강하는 과목은 “Small room”에서 진행됩니다.
+#폐강 등의 이유로 status가 “not allowed”인 수강생은 room assignment 또한 “not assigned”가 되어야 합니다.
+
+# 코드를 작성하세요.'
+df['room assignment'] = 'not assigned'
+
+allowed = df['status'] == 'allowed'
+
+course_counts = df.loc[allowed, "course name"].value_counts()
+
+auditorium_course = list(course_counts[course_counts >=80 ].index)
+large_course = list(course_counts[(course_counts <80) & (course_counts>=40) ].index)
+medium_course = list(course_counts[(course_counts <40) & (course_counts>=15) ].index)
+small_course = list(course_counts[(course_counts <15) & (course_counts>=5) ].index)
+
+for course in auditorium_course:
+    df.loc[(df["course name"] == course)& allowed, "room assignment"] = "Auditorium"
+    
+for course in large_course:
+    df.loc[(df["course name"] == course) & allowed, "room assignment"] = "Large room"
+
+for course in medium_course:
+    df.loc[(df["course name"] == course) & allowed, "room assignment"] = "Medium room"
+    
+for course in small_course:
+    df.loc[(df["course name"] == course) & allowed, "room assignment"] = "Small room"    
+
+df
