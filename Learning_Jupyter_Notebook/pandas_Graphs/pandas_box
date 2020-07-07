@@ -1,7 +1,0 @@
-%matplotlib inline
-import pandas as pd
-
-df = pd.read_csv('data/starbucks_drinks.csv')
-
-#스타벅스음료의칼로리를 박스플롯으로구하라
-df.plot(kind = 'box', y = 'Calories')
