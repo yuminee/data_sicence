@@ -30,10 +30,14 @@ Web Crawler : 웹 크롤링을 하는 프로그램
 ### Kaggle
 
 [tweet disaster code + 설명 turtorial](https://yuminee.github.io/2020/11/23/kaggle/tweet_disater/)
+
+
 [tweet disaster code turtorial](https://github.com/yuminee/data_sicence/blob/master/kaggle/tweet_disaster/tweet_disater_Turtorial.py)
 
 
 [tweet disaster code + 설명 EDAl](https://yuminee.github.io/2020/11/28/kaggle/tweet_disaster_EDA/)
+
+
 [tweet disaster code EDA](https://github.com/yuminee/data_sicence/blob/master/kaggle/tweet_disaster/tweet_disaster_EDA.py)
 
 
