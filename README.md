@@ -29,6 +29,8 @@ Web Crawler : 웹 크롤링을 하는 프로그램
 ---
 ### Kaggle
 
+#### tweet disaster
+
 [tweet disaster code + 설명 turtorial](https://yuminee.github.io/2020/11/23/kaggle/tweet_disater/)
 
 
